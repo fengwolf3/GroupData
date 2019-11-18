@@ -1,0 +1,1 @@
+<button type="primary" bindtap="query">查询登记结果</button>

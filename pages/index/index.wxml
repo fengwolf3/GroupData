@@ -1,0 +1,88 @@
+<view>
+  <view class="title">超级短信登记办理流程</view>
+
+  <view class="tips">* 本产品仅限集团客户受理（未授权客户）</view>
+
+  <view class="flow-process">
+    <block wx:for="{{flowProcessList}}" wx:key="index">
+      <view class="flow-process-item">
+        <view class="flow-process-con">
+          <text class="flow-process-index">{{index+1}}</text>
+          <text class="flow-process-title">{{item}}</text>
+        </view>
+      </view>
+      <view class="flow-process-arrow" wx:if="{{index < flowProcessList.length-1}}"></view>
+    </block>
+  </view>
+
+  <view class="zifei">
+    <view class="zifei1">套餐一：月功能费3000元/月，赠送20000条网内超级短信，超过部分网内超级短信按照0.15元/条收取。      </view>
+    <view class="zifei2">套餐二：月功能费1000元/月，赠送5000条网内超级短信，超过部分网内超级短信按照0.2元/条收取。        </view>
+    <view class="zifei3">套餐三：月功能费500元/月，赠送2000条网内超级短信，超过部分网内超级短信按照0.3元/条收取。         </view>
+  </view>
+
+
+  
+
+  <form bindsubmit="formSubmit">
+    <view class="form">
+      <view class="section">
+        <picker bindchange="bindPickerGsd" mode="selector" value="{{indexGsd}}" range="{{arrayGsd}}">
+          <view class="picker">归属县市</view>
+          <view class="picker-content" >{{arrayGsd[indexGsd]?arrayGsd[indexGsd]:"(必填项) 请下拉选择归属地"}}</view> 
+        </picker>
+      </view>    
+      <view class="input-group {{ formData.group_name.error ? 'error' : '' }}">
+        <label>单位名称</label>
+        <input type="text" name="group_name" value="{{formData.group_name.value}}" data-name="group_name" placeholder="(必填项) 请输入您的单位名称" bindinput="updateFormData" bindblur="formCheck" />
+        <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.group_name.error}}" />
+      </view>
+      <view class="input-group {{ formData.contact_name.error ? 'error' : '' }}">
+        <label>联系人</label>
+        <input type="text" name="contact_name" value="{{formData.contact_name.value}}" data-name="contact_name" placeholder="请输入您的名字" bindinput="updateFormData" bindblur="formCheck" />
+        <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.contact_name.error}}" />
+      </view>
+      <view class="input-group {{ formData.phone.error ? 'error' : '' }}">
+        <label>联系方式</label>
+        <input type="text" name="phone" value="{{formData.phone.value}}" data-name="phone" placeholder="(必填项) 请输入您的电话号码" bindinput="updateFormData" bindblur="formCheck" />
+        <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.phone.error}}" />
+      </view>
+      <view class="section">
+        <picker bindchange="bindPickerTc" mode="selector" value="{{indextc}}" range="{{arrayTc}}">
+          <view class="picker">预约套餐</view>
+          <view class="picker-content" >{{arrayTc[indextc]?arrayTc[indextc]:"(必填项) 请选择套餐档级"}}</view> 
+        </picker>
+      </view>
+      <view class="input-group {{ formData.fileUpload.error ? 'error' : '' }}">
+        <view class="shouquan-container">
+          <text>授权文件</text>
+          <view class="shouQuanFile">
+            <text bindtap="uploader">点击右侧提交授权文件</text>
+            <image class="fujian" src="./images/fujian1.png" bindtap="uploader"></image>
+          </view>
+        </view>
+        
+        
+        <!-- <input type="text" name="fileUpload" value="{{formData.fileUpload.value}}" data-name="fileUpload" placeholder="(必填项) 请上传单位授权文件" bindinput="updateFormData" bindblur="formCheck" />
+        <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.fileUpload.error}}" /> -->
+      </view>
+      <view class="input-group {{ formData.word.error ? 'error' : '' }}">
+        <label>备注</label>
+        <textarea name="word" value="{{formData.word.value}}" data-name="word" placeholder="请在这里填写您的定制要求" bindinput="updateFormData" bindblur="formCheck" />
+        <icon class="error-icon" type="cancel" color="red" size="16" wx:if="{{formData.word.error}}" />
+      </view>
+    </view>
+
+    <view class="footer">
+      <button class="dz-btn" formType="submit" loading="{{formStatus.submitting}}" disabled="{{formStatus.submitting}}" bindtap="openSuccess">提交</button>
+    </view>
+  </form>
+
+
+
+
+  <view class="ty_img">
+    <image src="images/二维码.png" mode="aspectFit"></image>
+  </view>
+
+</view>

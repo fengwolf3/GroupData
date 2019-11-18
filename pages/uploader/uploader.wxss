@@ -1,0 +1,133 @@
+page{
+    background-color: #EDEDED;
+
+}
+
+.page__bd {
+    padding-bottom: 40px;
+}
+
+.weui-cells {
+  position: relative;
+  margin-top: 8px;
+  background-color: #fff;
+  line-height: 1.41176471;
+  font-size: 17px;
+  margin-top: 0;
+}
+
+.weui-cell {
+  padding: 16px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-cell__bd {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.weui-uploader__hd {
+  padding-bottom: 16px;
+}
+
+.weui-uploader__overview {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.weui-uploader__title {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.weui-uploader__info {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+.weui-uploader__bd {
+  margin-bottom: -8px;
+  margin-right: -8px;
+  overflow: hidden;
+  display: block;
+}
+
+.weui-uploader__file {
+  float: left;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  
+ 
+}
+
+
+.weui-uploader__img {
+  display: block;
+  flex-wrap: wrap;
+  width: 70px;
+  height: 96px;
+}
+
+
+.weui-uploader__input-box {
+  float: left;
+  position: relative;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  width: 96px;
+  height: 96px;
+  box-sizing: border-box;
+  background-color: #ededed;
+}
+
+
+.weui-uploader__input-box:after, .weui-uploader__input-box:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #a3a3a3;
+}
+
+.weui-uploader__input-box:before {
+  width: 2px;
+  height: 32px;
+}
+
+.weui-uploader__input-box:after {
+  width: 32px;
+  height: 2px;
+}
+
+.weui-uploader__input-box:active {
+  border-color: #8b8b8b;
+}
+
+.weui-uploader__input-box:active:after, .weui-uploader__input-box:active:before {
+  background-color: #8b8b8b;
+}
+
+
+.weui-uploader__input {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}

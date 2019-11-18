@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/result/result",
+    "pages/uploader/uploader"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "超级短信业务",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFF"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

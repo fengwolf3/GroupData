@@ -1,0 +1,164 @@
+
+
+.title {
+    /* margin-top: 40rpx; */
+    background: #61a1ff;
+    color: white;
+    line-height: 60rpx;
+    text-align: center;
+    border:1px solid #538bdf;    
+    border-top-color: #84a5d7;
+    border-radius: 4px;
+    margin: 0 24rpx;
+}
+
+.tips{
+  padding: 20rpx ;
+  text-align: center;
+  font-size: 25rpx;
+}
+
+.flow-process {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24rpx;
+}
+
+.flow-process-item {
+    flex-grow: 3;
+    text-align: center;
+    padding: 12rpx 0;
+    background: #fafafa;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 1px #e4e4e4;
+}
+.flow-process-index {
+    display: block;
+    font-size: 30rpx;
+    color: #61a1ff;
+}
+
+.flow-process-title {
+    display: block;
+    font-size: 24rpx;
+    color: #7f7f7f;
+}
+
+.flow-process-arrow {
+    flex-grow: 1.5;
+    width: 17rpx;
+    height: 34rpx;
+    background: url("http://www.gzyueyun.com/m/yueyun-mini-app/assets/img/flow_process_right_arrow.png") no-repeat center/contain;
+}
+
+.zifei{
+  padding: 24px 16px;
+  padding: 24px calc(16px + constant(safe-area-inset-right)) calc(24px + constant(safe-area-inset-bottom)) calc(16px + constant(safe-area-inset-left));
+  padding: 24px calc(16px + env(safe-area-inset-right)) calc(24px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.9);
+
+}
+ .zifei1,.zifei2,.zifei3 {  
+  margin: 0 0 10rpx 0;
+}
+
+.section{    
+    position: relative;
+    padding:10rpx 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+.picker{
+  display:inline-block; 
+  margin-left:auto;
+  /* font-size: 25rpx; */
+}
+
+.picker-content{
+  display:inline-block; 
+  margin-left: 100rpx;
+  /* font-size: 25rpx; */
+}
+
+.shouquan-container{
+  display: flex;
+}
+
+.shouquan-container text{
+  margin-right: 106rpx;
+}
+
+.shouquan-container .fujian{
+  width: 30rpx;
+  height: 30rpx; 
+}
+
+.form {
+    /* margin-top: 10rpx; */
+    background: white;
+    font-size: 28rpx;
+    font-family:微软雅黑;
+    padding-left: 42rpx;
+    padding-bottom: 0;
+}
+
+.input-group {
+    position: relative;
+    padding:10rpx 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.input-group label {
+    display: inline-block;
+    width: 28%;
+    
+}
+
+.input-group input{
+    display: inline-block;
+    border: none;
+    width: 55%;
+    height: auto;
+    min-height: auto;
+    overflow: inherit;
+    padding-left: 5px;
+}
+
+
+
+.input-group textarea {
+    display: inline-block;
+    width: 65%;
+    vertical-align: top;
+    height: 60rpx;
+    padding-left: 5px;
+}
+
+.input-group .error-icon {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    margin-top: -8px;
+}
+
+.input-group.error input, .input-group.error textarea {
+    outline: 1px solid red;
+}
+
+.dz-btn {
+    margin-top: 20rpx;
+    background: #61a1ff;
+    color: white;
+    line-height: 30rpx;
+    text-align: center;
+    border:1px solid #538bdf;    
+    border-top-color: #84a5d7;
+    border-radius: 4px;
+}
+
+.ty_img{
+  text-align: center;
+  margin-top: 0
+}
