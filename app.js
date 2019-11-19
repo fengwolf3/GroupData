@@ -31,7 +31,7 @@ App({
       strDate = "0" + strDate;
     }
     var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate+
-      " " + date.getHours()+ date.getMinutes()  + date.getSeconds();
+      " " + date.getHours() + seperator1 + date.getMinutes() + seperator1+ date.getSeconds();
 
     // var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate +
     //   " " + date.getHours() + seperator2 + date.getMinutes() +

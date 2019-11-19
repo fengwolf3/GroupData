@@ -163,8 +163,8 @@ Page({
     wx.showLoading({
       title: '发布中...',
     })
-    const db = wx.cloud.database()
-    db.collection('groupdata').add({
+    wx.cloud.callFunction({
+      name:'formsubmit',
       data: {
         time: getApp().getNowFormatDate(),
         home_county: this.data.formData.home_county,
@@ -177,17 +177,33 @@ Page({
       success: res => {
         wx.hideLoading()
         console.log('发布成功', res)
-
-      },
-      fail: err => {
-        wx.hideLoading()
-        wx.showToast({
-          icon: 'none',
-          title: '网络不给力....'
-        })
-        console.error('发布失败', err)
       }
     })
+    // const db = wx.cloud.database()
+    // db.collection('groupdata').add({
+    //   data: {
+    //     time: getApp().getNowFormatDate(),
+    //     home_county: this.data.formData.home_county,
+    //     group_name: formData.group_name,
+    //     contact_name: formData.contact_name,
+    //     msisdn: formData.msisdn,
+    //     product_name: this.data.formData.product_name,
+    //     word: formData.word,
+    //   },
+    //   success: res => {
+    //     wx.hideLoading()
+    //     console.log('发布成功', res)
+
+    //   },
+    //   fail: err => {
+    //     wx.hideLoading()
+    //     wx.showToast({
+    //       icon: 'none',
+    //       title: '网络不给力....'
+    //     })
+    //     console.error('发布失败', err)
+    //   }
+    // })
 
   },
   wxValidate: null  ,
