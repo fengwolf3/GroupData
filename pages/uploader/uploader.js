@@ -55,9 +55,26 @@ Page({
         reslove()
       }).catch(err=>{
         console.log("授权文件上传失败",err)
-      })
-      )
+      }))
     }
+    
+    // Promise.all(promiseArr).then(res => {
+    //   db.collection('groupdata').add({
+    //     data: {
+    //       fileIDs: this.data.fileIDs //只有当所有的图片都上传完毕后，这个值才能被设置，但是上传文件是一个异步的操作，你不知道他们什么时候把fileid返回，所以就得用promise.all
+    //     }
+    //   })
+    //     .then(res => {
+    //       console.log(res)
+    //       wx.hideLoading()
+    //       wx.showToast({
+    //         title: '提交成功',
+    //       })
+    //     })
+    //     .catch(error => {
+    //       console.log(error)
+    //     })
+    // }),
     
 
     wx.navigateBack({

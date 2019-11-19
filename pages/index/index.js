@@ -69,7 +69,7 @@ Page({
         contact_name: {
           required: false,
           minlength:0,
-          maxlength: 10
+          maxlength: 20
         },
         phone: {
           required: true,
@@ -78,12 +78,12 @@ Page({
         product_name: {
           required: true,
           minlength: 2,
-          maxlength: 10
+          maxlength: 20
         },
         fileUpload: {
           required: true,
           minlength: 2,
-          maxlength: 10
+          maxlength: 20
         },
         word: {
           required: false,
@@ -176,9 +176,10 @@ Page({
       },
       success: res => {
         wx.hideLoading()
-        console.log('发布成功', res)
+        console.log('表单提交成功', res)
       }
     })
+   
     // const db = wx.cloud.database()
     // db.collection('groupdata').add({
     //   data: {

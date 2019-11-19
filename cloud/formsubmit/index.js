@@ -7,10 +7,7 @@ const _ = db.command
 // 云函数入口函数
 exports.main = async(event, context) => {
   try {
-    return await
-    console.log("event", event),
-      //新增数据add
-      db.collection('groupdata').add({
+    return await db.collection('groupdata').add({
         data: {
           time: event.time,
           home_county: event.home_county,
@@ -19,6 +16,7 @@ exports.main = async(event, context) => {
           msisdn: event.msisdn,
           product_name: event.product_name,
           word: event.word,
+          // fileIDs: event.fileIDs
         }
       })
   } catch (e) {
