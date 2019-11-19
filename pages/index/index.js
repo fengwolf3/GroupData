@@ -193,7 +193,6 @@ Page({
     //   success: res => {
     //     wx.hideLoading()
     //     console.log('发布成功', res)
-
     //   },
     //   fail: err => {
     //     wx.hideLoading()

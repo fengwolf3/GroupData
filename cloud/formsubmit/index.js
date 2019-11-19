@@ -9,7 +9,7 @@ exports.main = async(event, context) => {
   try {
     return await
     console.log("event", event),
-
+      //新增数据add
       db.collection('groupdata').add({
         data: {
           time: event.time,
